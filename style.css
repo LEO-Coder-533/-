@@ -42,8 +42,11 @@ hr{
 .content{
     padding: 25px;
     text-align: center;
-    columns: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     column-gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* الكروت */
@@ -55,6 +58,7 @@ hr{
     margin-bottom: 20px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
     transition: all 0.4s ease-in-out;
+    width: 45%;
 }
 
 .content .inf h1{
@@ -86,4 +90,9 @@ hr{
 .content:has(.cnim:hover) .inf:not(:hover),
 .content:has(.cnim:hover) .cnim:not(:hover){
     filter: blur(3px);
+}
+@media (max-width:865px){
+    .content .inf{
+        width: 95%;
+    }
 }
