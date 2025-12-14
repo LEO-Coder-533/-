@@ -1,0 +1,89 @@
+/* الأساس */
+body{
+    background-color: #F8F9FA; /* أبيض مكسور رسمي */
+    color: #374151;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* الهيدر */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 15px 0;
+    background-color: #FFFFFF;
+}
+
+header .h1h{
+    color: #1F3A5F; /* أزرق رسمي */
+}
+
+/* خط فاصل */
+hr{
+    opacity: 0.15;
+}
+
+/* اللوجو */
+.img-logo{
+    width: 70px;
+    border-radius: 15px;
+    border: 2px solid #D1D5DB;
+    transition: all 0.4s ease-in-out;
+}
+
+.img-logo:hover{
+    transform: scale(1.15);
+    border-color: #1F3A5F;
+    box-shadow: 0px 0px 8px rgba(31,58,95,0.35);
+}
+
+/* المحتوى */
+.content{
+    padding: 25px;
+    text-align: center;
+    columns: 3;
+    column-gap: 20px;
+}
+
+/* الكروت */
+.content .inf{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    color: #374151;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.4s ease-in-out;
+}
+
+.content .inf h1{
+    color: #1F3A5F;
+}
+
+.content .inf:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.15);
+}
+
+/* الصور */
+.content img{
+    width: 150px;
+    border-radius: 25px;
+    margin: 15px auto;
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.content img:hover{
+    transform: scale(1.15);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* تأثير التركيز */
+.content:has(.inf:hover) .inf:not(:hover),
+.content:has(.inf:hover) .cnim:not(:hover),
+.content:has(.cnim:hover) .inf:not(:hover),
+.content:has(.cnim:hover) .cnim:not(:hover){
+    filter: blur(3px);
+}
